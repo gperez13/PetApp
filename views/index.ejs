@@ -8,7 +8,15 @@
 
 	<h1>Meet the pets</h1>
 
-	<li>For loop</li>
+	<% pets.forEach(function(buddy, i){ %>
+		<li> <%=buddy.name%> </li>
+		<form action ="/pets<%=i%>?_method=DELETE/" method="POST">
+			<button type="submit">Release</button>
+			<a href="/pets/<%=i%>/edit">Update</a>
+		</form>
+	<% }) %>
+
+	<a href="/pets/new">New Puppo</a>
 
 </body>
 </html>

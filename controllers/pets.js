@@ -6,8 +6,15 @@ const pets = require('../models/petfriends')
 
 
 router.get('/', (req, res) => {
-	console.log('woof')
-	res.render('index', {pets: pets})
+
+
+	pets.find((err, pets) =>{
+		if(err){
+			res.send('there was an error with the database')
+		} else {
+				res.render('index', {pets: pets})
+		}
+	})
 })
 
 
