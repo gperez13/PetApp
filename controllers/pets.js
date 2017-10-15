@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 		if(err){
 			res.send('there was an error with the database')
 		} else {
+			console.log(pets)
 				res.render('index', {pets: pets})
 		}
 	})

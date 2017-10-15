@@ -6,9 +6,17 @@
 </head>
 <body>
 
-	<h1>Puppers</h1>
+	<h1><%=pets.Name%></h1>
 
-	<form></form>
+	<form action="/pets/<%=index%>/edit?_method=PUT" method="POST">
+	
+	Name <input	type="text" name="Name" value="<%=pets.Name%>">	
+	Species <input	type="text" name="Species" value="<%=pets.Species%>">	
+	Color <input	type="text" name="Color" value="<%=pets.Color%>">	
+	Age <input	type="number" name="Age" value="<%=pets.Age%>">	
+	Picture <input	type="text" name="Picture" value="<%=pets.Image%>">	
+	<button type="submit">Update</button>
+	</form>
 
 </body>
 </html>
