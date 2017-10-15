@@ -7,7 +7,7 @@ const pets = require('../models/petfriends')
 
 router.get('/', (req, res) => {
 	console.log('woof')
-	res.send('Who let the dawgs out?')
+	res.render('index', {pets: pets})
 })
 
 
