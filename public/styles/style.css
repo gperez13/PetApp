@@ -1,3 +1,7 @@
 body {
   background-color: whitesmoke;
 }
+body img {
+  height: 25%;
+  width: 25%;
+}

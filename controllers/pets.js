@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
 		if(err){
 			res.send('there was an error with the database')
 		} else {
-			console.log(pets[12].Name)
 				res.render('index', {pets: pets})
 		}
 	})
@@ -33,13 +32,37 @@ router.post('/create', (req, res) =>{
 		if(err){
 			res.send('this is not looking so well')
 		} else{
-			console.log(req.body)
 			res.redirect('/pets')
 		}
 	})
 }) // end of pet creation 
 
 
+
+router.get('/:index/edit', (req, res) => {
+	pets.find(req.params.index, (err, pets) =>{
+		if(err){
+			console.log('Fetch, boy!')
+		} else{
+			res.render('edit', {pets: pets[req.params.index], index: req.params.index})
+		}
+	})
+})
+
+
+
+
+router.delete('/:index', (req, res) =>{
+
+	pets.find((err, pets) =>{
+		if(err){
+			console.log('You screwed the pooch')
+		} else {
+			pets[req.params.index].remove();
+			res.redirect('/pets')
+		}
+	})
+})
 
 
 
