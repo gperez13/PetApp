@@ -9,7 +9,8 @@
 	<h1>Meet the pets</h1>
 
 	<% pets.forEach(function(buddy, i){ %>
-		<li> <%=buddy.name%> </li>
+		<li> <%=buddy.Name%> </li>
+		<img src="buddy.img">
 		<form action ="/pets<%=i%>?_method=DELETE/" method="POST">
 			<button type="submit">Release</button>
 			<a href="/pets/<%=i%>/edit">Update</a>
