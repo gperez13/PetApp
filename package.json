@@ -1,0 +1,19 @@
+{
+  "name": "petapp",
+  "version": "1.0.0",
+  "description": "This is a CRUD pet application using JS and a Mongodb base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gperez13/PetApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gperez13/PetApp/issues"
+  },
+  "homepage": "https://github.com/gperez13/PetApp#readme"
+}
